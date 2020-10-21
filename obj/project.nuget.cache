@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "+fB2kex+XrAhK7pbfqaWfSzcffjvD0pdhQ080vbpV+u+h+D0avU9eWKY09WK4FC2zVLukjp3YbuMFWlT7xjsEw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Araviel\\source\\repos\\AraClouds Tutoriel Youtube Analytics API\\AraClouds Tutoriel Youtube Analytics API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Araviel\\.nuget\\packages\\google.apis\\1.49.0\\google.apis.1.49.0.nupkg.sha512",
+    "C:\\Users\\Araviel\\.nuget\\packages\\google.apis.auth\\1.49.0\\google.apis.auth.1.49.0.nupkg.sha512",
+    "C:\\Users\\Araviel\\.nuget\\packages\\google.apis.core\\1.49.0\\google.apis.core.1.49.0.nupkg.sha512",
+    "C:\\Users\\Araviel\\.nuget\\packages\\google.apis.youtube.v3\\1.49.0.2112\\google.apis.youtube.v3.1.49.0.2112.nupkg.sha512",
+    "C:\\Users\\Araviel\\.nuget\\packages\\google.apis.youtubeanalytics.v2\\1.49.0.2113\\google.apis.youtubeanalytics.v2.1.49.0.2113.nupkg.sha512",
+    "C:\\Users\\Araviel\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

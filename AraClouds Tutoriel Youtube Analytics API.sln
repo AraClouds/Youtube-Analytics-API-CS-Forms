@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AraClouds Tutoriel Youtube Analytics API", "AraClouds Tutoriel Youtube Analytics API.csproj", "{44585ED3-A880-4D46-B72B-3F621B8A3E5C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44585ED3-A880-4D46-B72B-3F621B8A3E5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44585ED3-A880-4D46-B72B-3F621B8A3E5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44585ED3-A880-4D46-B72B-3F621B8A3E5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44585ED3-A880-4D46-B72B-3F621B8A3E5C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5950446C-6B95-4E6C-B123-7A998A0F57ED}
+	EndGlobalSection
+EndGlobal
