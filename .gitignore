@@ -2,3 +2,5 @@
 .vs/
 bin/
 obj/
+obj/project.assets.json
+obj/project.nuget.cache
