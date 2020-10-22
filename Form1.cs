@@ -1,6 +1,7 @@
 ﻿using Google.Apis.Auth.OAuth2;
 using Google.Apis.Services;
 using Google.Apis.YouTube.v3;
+using Google.Apis.YouTube.v3.Data;
 using Google.Apis.YouTubeAnalytics.v2;
 using Google.Apis.YouTubeAnalytics.v2.Data;
 using System;
@@ -31,7 +32,7 @@ namespace AraClouds_Tutoriel_Youtube_Analytics_API
         }
 
 
-        public async void FetchYoutubeAPI()
+        public async void FetchYoutubeAnalyticsAPI()
         {
             UserCredential credential;
             using (var stream = new FileStream("client_secrets.json", FileMode.Open, FileAccess.Read))
@@ -55,7 +56,7 @@ namespace AraClouds_Tutoriel_Youtube_Analytics_API
             request.EndDate = ("2020-09-30");
             request.Ids = ("channel==UCmLQ3sdAd6CypJIne5ZANaA");
             request.Metrics = ("views,comments,likes,dislikes,estimatedMinutesWatched,averageViewDuration");
-
+          
             QueryResponse requestquery = request.Execute();
 
             List<int> myChannelDataList = new List<int>();
@@ -65,9 +66,9 @@ namespace AraClouds_Tutoriel_Youtube_Analytics_API
             { 
                 int value = Convert.ToInt32(obj);
                 myChannelDataList.Add(value);
-                Debug.WriteLine("Value : " + value);
+          /*      Debug.WriteLine("Value : " + value);
                 Debug.WriteLine("LISTE / " + myChannelDataList[0]);
-                Debug.WriteLine("Count : " + myChannelDataList.Count);
+                Debug.WriteLine("Count : " + myChannelDataList.Count);*/
                 listsize = myChannelDataList.Count;
             }
             List<string> metrics = new List<string> { "Vues", "Commentaires", "Likes", "Dislike", "Minutes", "MoyenneTemps" };
@@ -81,13 +82,41 @@ namespace AraClouds_Tutoriel_Youtube_Analytics_API
                 labels.Text = metrics[i] + " :" + myChannelDataList[i].ToString();
                 this.Controls.Add(labels);
             }
+
+
+            // https://developers.google.com/youtube/v3/docs/channels/list
+            var youtubeService = new YouTubeService(new BaseClientService.Initializer()
+            {
+                HttpClientInitializer = credential,
+                ApplicationName = Assembly.GetExecutingAssembly().GetName().Name
+            });
+            var requestSub = youtubeService.Channels.List("statistics");
+            requestSub.Mine = (true);
+
+            ChannelListResponse responsesub = requestSub.Execute();
+
+            foreach (var sresults in responsesub.Items)
+            {
+                var substats = sresults.Statistics;
+                var subcount = substats.SubscriberCount;
+
+                Debug.WriteLine("SubCount : " + subcount);
+
+                Label labels = new Label();
+                labels.Top = 16;
+                labels.Left = 280;
+                labels.AutoSize = true;
+                labels.TextAlign = ContentAlignment.MiddleLeft;
+                labels.Text = "Subs :" + subcount;
+                this.Controls.Add(labels);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                FetchYoutubeAPI();
+                FetchYoutubeAnalyticsAPI();
             }
             catch
             {
