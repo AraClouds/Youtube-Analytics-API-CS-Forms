@@ -99,6 +99,9 @@ namespace AraClouds_Tutoriel_Youtube_Analytics_API
             {
                 var substats = sresults.Statistics;
                 var subcount = substats.SubscriberCount;
+                var viewCount = substats.ViewCount;
+                var videoCount = substats.VideoCount;
+                var commentsCount = substats.CommentCount;
 
                 Debug.WriteLine("SubCount : " + subcount);
 

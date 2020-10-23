@@ -1,4 +1,4 @@
-# Get your channel statistics withYoutube Analytics API with C# / Forms
+# Get your channel statistics with Youtube Analytics API with C# / Forms
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
  Everything you needs to retrieve your youtube channel statistics
